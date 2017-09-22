@@ -1,0 +1,813 @@
+begin work;
+  insert into revisor(id_user) values(1);
+  update usuarios set info_ac='Lic. Ingenieria Electronica y Telecomunicaciones' where id_user=1;
+commit work;
+
+
+
+insert into usuarios(nombre, apellido, correo, nickname, info_ac)
+values
+      ('Percy','Maldonado Quispe','percy.maldonado@ucsp.edu.pe','maldonado','Ph.D Fisica Pura. Universidad Nacional San Agustin'),
+      ('Alonso Jesús','Cerpa Salas','alonso.cerpa@ucsp.edu.pe','cerpa','Ph.D Computer Science. Universidad Católica San Pablo'),
+      ('Jose David','Mamani Vilca','jose.mamani@ucsm.edu.pe','dave','Ph.D Ingeniería Electronica. Universidad Católica Santa Maria'),
+      ('Pavel','Ruelas','pavel.ruelas@ucsm.edu.pe','pabel','Ph.D Ingeniería Mecanica. Universidad Nacional San Marcos'),
+      ('Jose','Valencia','jose.valencia@unsa.edu.pe','valencia','Ph.D Psicología. Universidad Católica Santa Maria'),
+      ('Rede Edwin','Maldonado','rede.maldonado@ucsm.edu.pe','rede','Ph.D Socilogía. Universidad Católica Santa Maria'),
+      ('Luis','Quispe Ramirez','luis.gonzalo@ucsp.edu.pe','gonzalo','Ph.D Ingeniería Civil. Universidad Católica San Pablo'),
+      ('Gemely Nikol','Flores Luque','gemely.flores@uni.edu.pe','gemely','Ph.D Matemática Pura. Universidad Nacional de Ingenierías'),
+      ('Gina Dayana','Cutipa Cruz','dayana.cutipa@unsa.edu.pe','dayana','Mg.S Física Pura. Universidad Nacional San Agustin'),
+      ('Richard Philiph','Feynman','richard.feynman@unsm.edu.pe','feynman','Mg.S Física. Universidad Nacional San Marcos'),
+      ('Werner','Heisenberg','werner.heisenberg@uni.edu.pe','arnol','Mg.S Ing. Física. Universidad Nacional de Ingeniería'),
+      ('Yampool','Condori Velasquez','yampool.condori@unsa.edu.pe','buenaventura','Mg.S Ing. Mecanica. Universidad Nacional San Agustin'),
+      ('Paolo','Justo Ugarte','paolo.justo@ucsm.edu.pe','justo','Lic. Mecanica. Universidad Católica Santa Maria'),
+      ('Rene','Quispe Huaylla','rene.quispe@uni.edu.pe','rene','Mg.S Ing. Mecanica. Universidad Nacional San Marcos'),
+      ('Richard','Maldonado Quispe','richard.maldonado@unsa.edu.pe','sws','Ph.D Computer Science. Universidad Católica San Pablo'),
+      ('Edwin','Salas Quispe','edwin.salas@una.edu.pe','salas','Ph.D Engineer Software. Universidad Católica Santa Maria'),
+      ('Alex','Cuadros Vargas','alex.cuadros@ucsp.edu.pe','alex','Ph.D Computer Science. Universidad Sao Paulo'),
+      ('José','Valdivia','joseVald@gmail.com','jose14','Ph.D. Psicología'),
+      ('Leandro','Salazar Ali','leandro.ali@gmail.com','Leo23','Mg.S. Psicología'),
+      ('Lorena','Rosel','lorena.rosel@gmail.com','lorena32','Mg.S. Psicología'),
+      ('María','Salcedo','mar21salc@gmail.com','mariaSS21','Ph.D. Socilogía'),
+      ('Jimmy','Capattinta','jimmy.capa@gmail.com','jimmy43','Mg.S. Socilogía'),
+      ('Flor Rosa','Tone','rosa.tone@gmail.com','rosa11','Lic. Socilogía'),
+      ('Rosario','Martínez','rosarioM@gmail.com','rosarioM','Lic. Ingenieria Civil'),
+      ('Lucas','Nuñez','lucas.nuñes@gmail.com','lucas54','Ph.D. Ingenieria Civil'),
+      ('Rose','Guillén','rose.gui47@hotmail.com','roseGui47','Ph.D. Ingeniería Civil'),
+      ('Rose','Guillén','rose.gui47@hotmail.com','roseGui47','Ph.D. Ingeniería Electronica'),
+      ('Marcos','Aldea Chicllasto','marcos.aldea@ucsp.edu.pe','aldea','Mg.S. Ingenieria Electronica y Telecomunicaciones'),
+      ('Jorge','Benavides','jorge.bena@hotmail.com','JB','Ph.D. Ingeniería Electronica'),
+      ('Úrsula','Pérez','ursula.perez24@gmail.com','ursPer24','Mg.S. Matemática Pura'),
+      ('Jorge','Lazo Paredes','jorge.lazo@gmail.com','jorgeL','Mg.S. Matemática'),
+      ('Maria','Betzabe','maria.pbetzabe4@gmail.com','Betsabe','Ph.D. Matemática'),
+      ('Ernesto','Cuadros Vargas','ernesto.cuadros@utec.edu.pe','er','Ph.D Computer Science. ICMC Universidad de Sao Paulo'),
+      ('Yván','Tupac Valdivia','ytupac@ucsp.edu.pe','yván','Ph.D. and Mg.S in Electrical Engineering'),
+      ('Edwards','J. T.','edwuar.j@gmail.com','edwuar','Mg.S Civil Engineering'),
+      ('Stephen','Turner','stephen.t@gmail.com','turner','Mg.S Socilogía'),
+      ('Johnie','J Allen','johnie_allen@gmail.com','allen','Mg.S Psicología'),
+      ('Adaricheva','K','adari.j@gmail.com','kadaravi','Mg.S Matemática'),
+      ('Landau','L. D','landauL@gmail.com','landau','Lic. Física'),
+      ('Irwin','J.','j_irwin@gmail.com','irwin','Mg.S Mechanics Engineering'),
+      ('Angel','Cutipa Samayani','angel.cutipa@ucsp.edu.pe','cutipa',''),
+      ('Luis Fernando','Titto Surco','luis.titto@ucsp.edu.pe','ttito',''),
+      ('Kevin','Sanchez Sanchez','kevin.sanchez@ucsp.edu.pe','kevin',''),
+      ('Hernan','Quispe','hernan_q@unsa.edu.pe','hernan','Lic. Sociologia'),
+      ('Enrique Flavio','Dias','flavio.dias@ucsp.edu.pe','diaz',''),
+      ('Julio Alegria','Morales','julio.alegria@ucsp.edu.pe','jalegria',''),
+      ('Carlos','Arias','carlos.arias@ucsp.edu.pe','carlos','Ph.D Computer Science'),
+      ('Jhon','Parillo Yucra','jhon.antony@gmail.com','parillo54',''),
+      ('Rolando','Zuares','rolando.zuares@ucsp.edu.pe','rolando',''),
+      ('Pabel','Rodriguez','pabel.rodriguez@ucsp.edu.pe','Pabel','Bach. Computer Science');
+
+
+insert into md(titulo, citas, precio, estado,año) 
+values 
+  ('Introduction to the SAM-S M* and MAM-S M* families',23,'68.50'::float8::numeric::money,2,'2016-01-02'),
+  ('Concebendo a Engenharia en Nanotecnologia',15,'58.65'::float8::numeric::money,2,'2016-02-03'),
+  ('Civil Engineering for Underground Rail Transport',8,'48.99'::float8::numeric::money,2,'2016-04-28'),
+  ('Philosophy of Anthropology and Sociology',21,'255.00'::float8::numeric::money,2,'2016-04-30'),
+  ('The General Aggression Model',11,'17.00'::float8::numeric::money,2,'2016-05-06'),
+  ('Ordered direct implicational basis of a finite closure system',25,'48.00'::float8::numeric::money,2,'2016-05-09'),
+  ('Non-Relativistic Theory',158,'87.00'::float8::numeric::money,2,'2016-05-24'),
+  ('Mechanical Engineers Handbook',28,'56.00'::float8::numeric::money,2,'2016-06-13')
+  ('Antropologia de la Ciencia',3,'18.50'::float8::numeric::money,2,'2016-07-24'),
+  ('Procesamiento de Imagenes con Opencv',15,'98.65'::float8::numeric::money,2,'2016-07-29');
+
+insert into revisor(id_user)
+values
+      (9),(10),(11),(12),(13),(14),(15),(16),
+      (17),(18),(19),(20),(21),(22),(23),(24),
+      (25),(26),(27),(28),(29),(30),(31),(32);
+
+insert into autor(id_user)
+values
+      (33),(34),(35),(36),(37),(38),(39),(40),(44),(47),(50);
+
+insert into libro_autor(id_autor, id_md)
+values
+      (1,1),(2,2),(3,3),(4,4),
+      (5,5),(6,6),(7,7),(8,8),
+      (9,9),(10,10),(11,10);
+
+insert into dir_editorial(id_user)
+values
+      (1),(2),(3),(4),(5),(6),(7),(8);
+
+insert into enviar(id_autor, id_md, id_director, fecha)
+values
+      (1,1,1,'2016-01-02 23:15:48'),(2,2,3,'2016-02-03 14:56:14'),
+      (3,3,7,'2016-04-30 19:45:14'),(4,4,6,'2016-05-01 23:26:34'),
+      (5,5,5,'2016-05-10 15:45:23'),(6,6,8,'2016-05-11 12:18:34'),
+      (7,7,1,'2016-05-26 05:34:43'),(8,8,4,'2016-06-15 04:23:45'),
+      (9,9,5,'2016-08-06 12:34:43'),(10,10,2,'2016-08-02 03:23:45'),
+      (11,10,2,'2016-08-02 03:23:45');
+
+insert into campos(nombre, descripcion)
+values
+      ('Computer Science','Estudio sistemático de la factibilidad, estructura, expresión y mecanización de procedimientos metódicos (o algoritmos) que subyacen en la adquisición, representación, procesamiento, almacenamiento, comunicación y acceso a la información si dicha información está codificada en forma de bits en una memoria de computadora'),
+      ('Fisica Pura','Ciencia que estudia las propiedades de los cuerpos y las leyes que rigen las transformaciones que afectan a su estado y a su movimiento, sin alterar su naturaleza'),
+      ('Matematica Pura','Estudio de las propiedades y relaciones entre entidades abstractas como números, figuras geométricas o símbolos.'),
+      ('Ing. Civil','La especialidad de la ingeniería que se encarga de la creación de infraestructuras, obras de transporte y emprendimiento hidráulicos se denomina ingeniería civil.'),
+      ('Sociologia','Ciencia que se dedica al estudio de los grupos sociales (conjunto de individuos que conviven agrupados en diversos tipos de asociaciones).'),
+      ('Psicologia','Disciplina que investiga sobre los procesos mentales de personas y animales.'),
+      ('Ing. Mecanica','La ingeniería mecánica es una rama de la ingeniería que aplica las ciencias exactas, especialmente en los principios físicos.'),
+      ('Ing. Electronica','Se ocupa justamente de atender, resolver y estudiar cuestiones vinculadas a esta materia tales como: la transformación de la electricidad.');
+
+insert into esp_autor(id_autor, id_campo)
+values
+      (1,1),(2,8),(3,4),(4,5),(5,6),(6,3),(7,2),(8,7),(9,5),(10,1),(11,1);
+
+insert into esp_revisor(id_revisor, id_campo)
+values
+      (1,2),(2,2),(3,2),(4,7),(5,7),(6,7),
+      (7,1),(8,1),(9,1),(10,6),(11,6),(12,6),
+      (13,5),(14,5),(15,5),(16,4),(17,4),(18,4),
+      (19,8),(20,8),(21,8),(22,3),(23,3),(24,3);
+
+insert into esp_director(id_director, id_campo)
+values
+      (1,2),(2,1),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3);
+
+insert into eval_cabecera(id_md, id_director,fecha)
+values
+      (1,1,'2016-01-04 23:15:48'),
+      (2,3,'2016-02-05 14:56:14'),
+      (3,7,'2016-05-02 19:45:14'),
+      (4,6,'2016-05-03 23:26:34'),
+      (5,5,'2016-05-12 15:45:23'),
+      (6,8,'2016-05-13 12:18:34'),
+      (7,1,'2016-05-28 05:34:43'),
+      (8,4,'2016-06-17 04:23:45'),
+      (9,5,'2016-08-08 13:43:45'),
+      (10,2,'2016-08-09 21:35:15');
+
+insert into eval_detalle(id_evaluacion, id_revisor, comentario, nota)
+values
+      (1,7,'Muy buena la calidad de tu trabajo',5),(1,8,'Muy bueno',4),(1,9,'Preciso',4),
+      (2,19,'Buen Aporte',4),(2,20,'Excelente',4),(2,21,'Me sorprende',4),
+      (3,16,'Tienes que investigar más',2),(3,17,'Regular',3),(3,18,'No me agrado',2),
+      (4,13,'Te falto Argumentar',3),(4,14,'Falta mejorar',3),(4,15,'Regular',3),
+      (5,10,'Esta bueno',4),(5,11,'Falta investigar',3),(5,12,'Buenisimo',5),
+      (6,22,'Muy buena calidad',4),(6,23,'Muy innovador',5),(6,24,'Falto citar un importate autor',4),
+      (7,1,'Excelente, Preciso',5),(7,2,'Muy bueno',5),(7,3,'Bien argumetado',5),
+      (8,4,'Regular',4),(8,5,'Falta investigar más',3),(8,6,'bueno',4),
+      (9,13,'Malo',1),(9,14,'Incompleto',3),(9,15,'Un poco mediocre tu trabajo',2),
+      (10,7,'Preciso',4),(10,8,'',),(10,9,'',);
+
+insert into md_campo(id_campo, id_md)
+values 
+      (1,1),(8,2),(4,3),(5,4),
+      (6,5),(3,6),(2,7),(7,8)
+      (5,9),(1,10);  
+
+insert into h_busqueda(id_user, id_md, fecha)
+values
+  (48,8,'2016-10-14 12:43:32'),(45,2,'2016-10-15 17:23:12'),
+  (41,6,'2016-10-17 23:13:42'),(43,7,'2016-10-17 22:56:24'),
+  (49,7,'2016-10-19 11:35:45'),(28,1,'2016-10-20 12:43:32'),
+  (32,7,'2016-10-23 23:12:52'),(25,8,'2016-10-25 05:54:16'),
+  (48,8,'2016-10-14 12:43:32'),(45,2,'2016-10-15 17:23:12'),
+  (45,5,'2016-10-26 21:43:12'),(48,9,'2016-10-27 22:56:24');
+
+insert into md_adquirido(id_user, id_md, fecha)
+values
+  (48,8,'2016-10-14 12:45:12'),(41,6,'2016-10-17 23:13:42'),
+  (43,7,'2016-10-17 22:56:24'),(49,7,'2016-10-17 22:56:24'),
+  (28,1,'2016-10-20 12:43:32'),(25,8,'2016-10-25 05:54:16'),
+  (45,2,'2016-10-15 17:25:12'),(45,5,'2016-10-26 21:45:12'),
+  (48,9,'2016-10-27 22:58:24');
+
+
+update usuarios set password='percy' where id_user=1;
+update usuarios set password='alonso' where id_user=2;
+update usuarios set password='jose' where id_user=3;
+update usuarios set password='pavel' where id_user=4;
+update usuarios set password='jose' where id_user=5;
+update usuarios set password='rede' where id_user=6;
+update usuarios set password='luis' where id_user=7;
+update usuarios set password='gemely' where id_user=8;
+update usuarios set password='gina' where id_user=9;
+update usuarios set password='richard' where id_user=10;
+update usuarios set password='werner' where id_user=11;
+update usuarios set password='yampool' where id_user=12;
+update usuarios set password='paolo' where id_user=13;
+update usuarios set password='rene' where id_user=14;
+update usuarios set password='richard' where id_user=15;
+update usuarios set password='edwin' where id_user=16;
+update usuarios set password='alex' where id_user=17;
+update usuarios set password='jose' where id_user=18;
+update usuarios set password='leandro' where id_user=19;
+update usuarios set password='lorena' where id_user=20;
+update usuarios set password='maria' where id_user=21;
+update usuarios set password='jimmy' where id_user=22;
+update usuarios set password='flor' where id_user=23;
+update usuarios set password='rosario' where id_user=25;
+update usuarios set password='lucas' where id_user=24;
+update usuarios set password='rose' where id_user=26;
+update usuarios set password='rose' where id_user=27;
+update usuarios set password='marcos' where id_user=28;
+update usuarios set password='jorge' where id_user=29;
+update usuarios set password='ursula' where id_user=30;
+update usuarios set password='jorge' where id_user=31;
+update usuarios set password='maria' where id_user=32;
+update usuarios set password='ernesto' where id_user=33;
+update usuarios set password='yvan' where id_user=34;
+update usuarios set password='edwards' where id_user=35;
+update usuarios set password='stephen' where id_user=36;
+update usuarios set password='johnie' where id_user=37;
+update usuarios set password='adaricheva' where id_user=38;
+update usuarios set password='landau' where id_user=39;
+update usuarios set password='irwin' where id_user=40;
+update usuarios set password='angel' where id_user=41;
+update usuarios set password='luis' where id_user=42;
+update usuarios set password='kevin' where id_user=43;
+update usuarios set password='hernan' where id_user=44;
+update usuarios set password='enrique' where id_user=45;
+update usuarios set password='julio' where id_user=46;
+update usuarios set password='carlos' where id_user=47;
+update usuarios set password='jhon' where id_user=48;
+update usuarios set password='rolando' where id_user=49;
+update usuarios set password='pabel' where id_user=50;
+
+
+
+
+create 
+CREATE TABLE public.autor
+(
+  id_autor integer NOT NULL DEFAULT nextval('autor_id_autor_seq'::regclass),
+  id_user integer,
+  CONSTRAINT autor_pkey PRIMARY KEY (id_autor),
+  CONSTRAINT fk_auus FOREIGN KEY (id_user)
+      REFERENCES public.usuarios (id_user) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.autor
+  OWNER TO dave;
+
+
+-- Table: public.campos
+
+-- DROP TABLE public.campos;
+
+CREATE TABLE public.campos
+(
+  id_campo integer NOT NULL DEFAULT nextval('campos_id_campo_seq'::regclass),
+  nombre character varying(100),
+  descripcion text,
+  CONSTRAINT campos_pkey PRIMARY KEY (id_campo)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.campos
+  OWNER TO dave;
+
+
+-- Table: public.dir_editorial
+
+-- DROP TABLE public.dir_editorial;
+
+CREATE TABLE public.dir_editorial
+(
+  id_director integer NOT NULL DEFAULT nextval('dir_editorial_id_director_seq'::regclass),
+  id_user integer,
+  CONSTRAINT dir_editorial_pkey PRIMARY KEY (id_director),
+  CONSTRAINT pk_deus FOREIGN KEY (id_user)
+      REFERENCES public.usuarios (id_user) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.dir_editorial
+  OWNER TO dave;
+
+
+-- Table: public.enviar
+
+-- DROP TABLE public.enviar;
+
+CREATE TABLE public.enviar
+(
+  id_envio integer NOT NULL DEFAULT nextval('enviar_id_envio_seq'::regclass),
+  id_autor integer,
+  id_md integer,
+  id_director integer,
+  fecha timestamp without time zone,
+  CONSTRAINT enviar_pkey PRIMARY KEY (id_envio),
+  CONSTRAINT fk_endi FOREIGN KEY (id_director)
+      REFERENCES public.dir_editorial (id_director) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_enmd FOREIGN KEY (id_md)
+      REFERENCES public.md (id_md) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT pl_enau FOREIGN KEY (id_autor)
+      REFERENCES public.autor (id_autor) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.enviar
+  OWNER TO dave;
+
+
+-- Table: public.esp_autor
+
+-- DROP TABLE public.esp_autor;
+
+CREATE TABLE public.esp_autor
+(
+  id_autor integer NOT NULL,
+  id_campo integer NOT NULL,
+  CONSTRAINT esp_autor_pkey PRIMARY KEY (id_autor, id_campo),
+  CONSTRAINT fk_esau FOREIGN KEY (id_autor)
+      REFERENCES public.autor (id_autor) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_escamp FOREIGN KEY (id_campo)
+      REFERENCES public.campos (id_campo) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.esp_autor
+  OWNER TO dave;
+
+-- Table: public.esp_director
+
+-- DROP TABLE public.esp_director;
+
+CREATE TABLE public.esp_director
+(
+  id_director integer NOT NULL,
+  id_campo integer NOT NULL,
+  CONSTRAINT esp_director_pkey PRIMARY KEY (id_director, id_campo),
+  CONSTRAINT fk_escam FOREIGN KEY (id_campo)
+      REFERENCES public.campos (id_campo) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_esdir FOREIGN KEY (id_director)
+      REFERENCES public.dir_editorial (id_director) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.esp_director
+  OWNER TO dave;
+
+
+-- Table: public.esp_revisor
+
+-- DROP TABLE public.esp_revisor;
+
+CREATE TABLE public.esp_revisor
+(
+  id_revisor integer NOT NULL,
+  id_campo integer NOT NULL,
+  CONSTRAINT esp_revisor_pkey PRIMARY KEY (id_revisor, id_campo),
+  CONSTRAINT fk_escamp FOREIGN KEY (id_campo)
+      REFERENCES public.campos (id_campo) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_esre FOREIGN KEY (id_revisor)
+      REFERENCES public.revisor (id_revisor) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.esp_revisor
+  OWNER TO dave;
+ 
+
+-- Table: public.eval_cabecera
+
+-- DROP TABLE public.eval_cabecera;
+
+CREATE TABLE public.eval_cabecera
+(
+  id_evaluacion integer NOT NULL DEFAULT nextval('eval_cabecera_id_evaluacion_seq'::regclass),
+  id_md integer,
+  id_director integer,
+  fecha timestamp without time zone,
+  CONSTRAINT eval_cabecera_pkey PRIMARY KEY (id_evaluacion),
+  CONSTRAINT fk_evalcadir FOREIGN KEY (id_director)
+      REFERENCES public.dir_editorial (id_director) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_evalcamd FOREIGN KEY (id_md)
+      REFERENCES public.md (id_md) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.eval_cabecera
+  OWNER TO dave;
+
+
+
+-- Table: public.eval_detalle
+
+-- DROP TABLE public.eval_detalle;
+
+CREATE TABLE public.eval_detalle
+(
+  id_evaluacion integer NOT NULL,
+  id_revisor integer NOT NULL,
+  comentario text,
+  nota integer,
+  CONSTRAINT eval_detalle_pkey PRIMARY KEY (id_evaluacion, id_revisor),
+  CONSTRAINT fk_evalcare FOREIGN KEY (id_revisor)
+      REFERENCES public.revisor (id_revisor) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_evaldeca FOREIGN KEY (id_evaluacion)
+      REFERENCES public.eval_cabecera (id_evaluacion) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.eval_detalle
+  OWNER TO dave;
+
+
+-- Table: public.h_busqueda
+
+-- DROP TABLE public.h_busqueda;
+
+CREATE TABLE public.h_busqueda
+(
+  id_busqueda integer NOT NULL DEFAULT nextval('h_busqueda_id_busqueda_seq'::regclass),
+  id_user integer,
+  id_md integer,
+  fecha timestamp without time zone,
+  CONSTRAINT h_busqueda_pkey PRIMARY KEY (id_busqueda),
+  CONSTRAINT fk_busmd FOREIGN KEY (id_md)
+      REFERENCES public.md (id_md) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_busus FOREIGN KEY (id_user)
+      REFERENCES public.usuarios (id_user) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.h_busqueda
+  OWNER TO dave;
+
+
+-- Table: public.libro_autor
+
+-- DROP TABLE public.libro_autor;
+
+CREATE TABLE public.libro_autor
+(
+  id_autor integer NOT NULL,
+  id_md integer NOT NULL,
+  CONSTRAINT libro_autor_pkey PRIMARY KEY (id_autor, id_md),
+  CONSTRAINT fk_laau FOREIGN KEY (id_autor)
+      REFERENCES public.autor (id_autor) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_lamd FOREIGN KEY (id_md)
+      REFERENCES public.md (id_md) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.libro_autor
+  OWNER TO dave;
+
+-- Table: public.md
+
+-- DROP TABLE public.md;
+
+CREATE TABLE public.md
+(
+  id_md integer NOT NULL DEFAULT nextval('md_id_md_seq'::regclass),
+  titulo text,
+  citas integer,
+  precio money,
+  estado integer,
+  "año" date,
+  CONSTRAINT md_pkey PRIMARY KEY (id_md)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.md
+  OWNER TO dave;
+
+
+-- Table: public.md_adquirido
+
+-- DROP TABLE public.md_adquirido;
+
+CREATE TABLE public.md_adquirido
+(
+  id_user integer NOT NULL,
+  id_md integer NOT NULL,
+  fecha timestamp without time zone,
+  CONSTRAINT md_adquirido_pkey PRIMARY KEY (id_user, id_md),
+  CONSTRAINT fk_admd FOREIGN KEY (id_md)
+      REFERENCES public.md (id_md) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_adus FOREIGN KEY (id_user)
+      REFERENCES public.usuarios (id_user) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.md_adquirido
+  OWNER TO dave;
+
+
+-- Table: public.md_campo
+
+-- DROP TABLE public.md_campo;
+
+CREATE TABLE public.md_campo
+(
+  id_campo integer NOT NULL,
+  id_md integer NOT NULL,
+  CONSTRAINT md_campo_pkey PRIMARY KEY (id_md, id_campo),
+  CONSTRAINT fk_mdcamcam FOREIGN KEY (id_campo)
+      REFERENCES public.campos (id_campo) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE,
+  CONSTRAINT fk_mdcammd FOREIGN KEY (id_md)
+      REFERENCES public.md (id_md) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.md_campo
+  OWNER TO dave;
+
+
+-- Table: public.revisor
+
+-- DROP TABLE public.revisor;
+
+CREATE TABLE public.revisor
+(
+  id_revisor integer NOT NULL DEFAULT nextval('revisor_id_revisor_seq'::regclass),
+  id_user integer,
+  CONSTRAINT revisor_pkey PRIMARY KEY (id_revisor),
+  CONSTRAINT pk_reus FOREIGN KEY (id_user)
+      REFERENCES public.usuarios (id_user) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE CASCADE
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.revisor
+  OWNER TO dave;
+
+  -- Table: public.usuarios
+
+-- DROP TABLE public.usuarios;
+
+CREATE TABLE public.usuarios
+(
+  id_user integer NOT NULL DEFAULT nextval('usuarios_id_user_seq'::regclass),
+  nombre character varying(30),
+  apellido character varying(30),
+  correo character varying(30),
+  nickname character varying(20),
+  info_ac text,
+  pass character(32),
+  CONSTRAINT usuarios_pkey PRIMARY KEY (id_user)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.usuarios
+  OWNER TO dave;
+
+
+insert into usuarios(nombre, apellido, correo, nickname, info_ac)
+values
+      ('Percy','Maldonado Quispe','percy.maldonado@ucsp.edu.pe','maldonado','Ph.D Fisica Pura. Universidad Nacional San Agustin'),
+      ('Alonso Jesús','Cerpa Salas','alonso.cerpa@ucsp.edu.pe','cerpa','Ph.D Computer Science. Universidad Católica San Pablo'),
+      ('Jose David','Mamani Vilca','jose.mamani@ucsm.edu.pe','dave','Ph.D Ingeniería Electronica. Universidad Católica Santa Maria'),
+      ('Pavel','Ruelas','pavel.ruelas@ucsm.edu.pe','pabel','Ph.D Ingeniería Mecanica. Universidad Nacional San Marcos'),
+      ('Jose','Valencia','jose.valencia@unsa.edu.pe','valencia','Ph.D Psicología. Universidad Católica Santa Maria'),
+      ('Rede Edwin','Maldonado','rede.maldonado@ucsm.edu.pe','rede','Ph.D Socilogía. Universidad Católica Santa Maria'),
+      ('Luis','Quispe Ramirez','luis.gonzalo@ucsp.edu.pe','gonzalo','Ph.D Ingeniería Civil. Universidad Católica San Pablo'),
+      ('Gemely Nikol','Flores Luque','gemely.flores@uni.edu.pe','gemely','Ph.D Matemática Pura. Universidad Nacional de Ingenierías'),
+      ('Gina Dayana','Cutipa Cruz','dayana.cutipa@unsa.edu.pe','dayana','Mg.S Física Pura. Universidad Nacional San Agustin'),
+      ('Richard Philiph','Feynman','richard.feynman@unsm.edu.pe','feynman','Mg.S Física. Universidad Nacional San Marcos'),
+      ('Werner','Heisenberg','werner.heisenberg@uni.edu.pe','arnol','Mg.S Ing. Física. Universidad Nacional de Ingeniería'),
+      ('Yampool','Condori Velasquez','yampool.condori@unsa.edu.pe','buenaventura','Mg.S Ing. Mecanica. Universidad Nacional San Agustin'),
+      ('Paolo','Justo Ugarte','paolo.justo@ucsm.edu.pe','justo','Lic. Mecanica. Universidad Católica Santa Maria'),
+      ('Rene','Quispe Huaylla','rene.quispe@uni.edu.pe','rene','Mg.S Ing. Mecanica. Universidad Nacional San Marcos'),
+      ('Richard','Maldonado Quispe','richard.maldonado@unsa.edu.pe','sws','Ph.D Computer Science. Universidad Católica San Pablo'),
+      ('Edwin','Salas Quispe','edwin.salas@una.edu.pe','salas','Ph.D Engineer Software. Universidad Católica Santa Maria'),
+      ('Alex','Cuadros Vargas','alex.cuadros@ucsp.edu.pe','alex','Ph.D Computer Science. Universidad Sao Paulo'),
+      ('José','Valdivia','joseVald@gmail.com','jose14','Ph.D. Psicología'),
+      ('Leandro','Salazar Ali','leandro.ali@gmail.com','Leo23','Mg.S. Psicología'),
+      ('Lorena','Rosel','lorena.rosel@gmail.com','lorena32','Mg.S. Psicología'),
+      ('María','Salcedo','mar21salc@gmail.com','mariaSS21','Ph.D. Socilogía'),
+      ('Jimmy','Capattinta','jimmy.capa@gmail.com','jimmy43','Mg.S. Socilogía'),
+      ('Flor Rosa','Tone','rosa.tone@gmail.com','rosa11','Lic. Socilogía'),
+      ('Rosario','Martínez','rosarioM@gmail.com','rosarioM','Lic. Ingenieria Civil'),
+      ('Lucas','Nuñez','lucas.nuñes@gmail.com','lucas54','Ph.D. Ingenieria Civil'),
+      ('Rose','Guillén','rose.gui47@hotmail.com','roseGui47','Ph.D. Ingeniería Civil'),
+      ('Rose','Guillén','rose.gui47@hotmail.com','roseGui47','Ph.D. Ingeniería Electronica'),
+      ('Marcos','Aldea Chicllasto','marcos.aldea@ucsp.edu.pe','aldea','Mg.S. Ingenieria Electronica y Telecomunicaciones'),
+      ('Jorge','Benavides','jorge.bena@hotmail.com','JB','Ph.D. Ingeniería Electronica'),
+      ('Úrsula','Pérez','ursula.perez24@gmail.com','ursPer24','Mg.S. Matemática Pura'),
+      ('Jorge','Lazo Paredes','jorge.lazo@gmail.com','jorgeL','Mg.S. Matemática'),
+      ('Maria','Betzabe','maria.pbetzabe4@gmail.com','Betsabe','Ph.D. Matemática'),
+      ('Ernesto','Cuadros Vargas','ernesto.cuadros@utec.edu.pe','er','Ph.D Computer Science. ICMC Universidad de Sao Paulo'),
+      ('Yván','Tupac Valdivia','ytupac@ucsp.edu.pe','yván','Ph.D. and Mg.S in Electrical Engineering'),
+      ('Edwards','J. T.','edwuar.j@gmail.com','edwuar','Mg.S Civil Engineering'),
+      ('Stephen','Turner','stephen.t@gmail.com','turner','Mg.S Socilogía'),
+      ('Johnie','J Allen','johnie_allen@gmail.com','allen','Mg.S Psicología'),
+      ('Adaricheva','K','adari.j@gmail.com','kadaravi','Mg.S Matemática'),
+      ('Landau','L. D','landauL@gmail.com','landau','Lic. Física'),
+      ('Irwin','J.','j_irwin@gmail.com','irwin','Mg.S Mechanics Engineering'),
+      ('Angel','Cutipa Samayani','angel.cutipa@ucsp.edu.pe','cutipa',''),
+      ('Luis Fernando','Titto Surco','luis.titto@ucsp.edu.pe','ttito',''),
+      ('Kevin','Sanchez Sanchez','kevin.sanchez@ucsp.edu.pe','kevin',''),
+      ('Hernan','Quispe','hernan_q@unsa.edu.pe','hernan','Lic. Sociologia'),
+      ('Enrique Flavio','Dias','flavio.dias@ucsp.edu.pe','diaz',''),
+      ('Julio Alegria','Morales','julio.alegria@ucsp.edu.pe','jalegria',''),
+      ('Carlos','Arias','carlos.arias@ucsp.edu.pe','carlos','Ph.D Computer Science'),
+      ('Jhon','Parillo Yucra','jhon.antony@gmail.com','parillo54',''),
+      ('Rolando','Zuares','rolando.zuares@ucsp.edu.pe','rolando',''),
+      ('Pabel','Rodriguez','pabel.rodriguez@ucsp.edu.pe','Pabel','Bach. Computer Science');
+
+
+insert into md(titulo, citas, precio, estado,año) 
+values 
+  ('Introduction to the SAM-S M* and MAM-S M* families',23,'68.50'::float8::numeric::money,2,'2016-01-02'),
+  ('Concebendo a Engenharia en Nanotecnologia',15,'58.65'::float8::numeric::money,2,'2016-02-03'),
+  ('Civil Engineering for Underground Rail Transport',8,'48.99'::float8::numeric::money,2,'2016-04-28'),
+  ('Philosophy of Anthropology and Sociology',21,'255.00'::float8::numeric::money,2,'2016-04-30'),
+  ('The General Aggression Model',11,'17.00'::float8::numeric::money,2,'2016-05-06'),
+  ('Ordered direct implicational basis of a finite closure system',25,'48.00'::float8::numeric::money,2,'2016-05-09'),
+  ('Non-Relativistic Theory',158,'87.00'::float8::numeric::money,2,'2016-05-24'),
+  ('Mechanical Engineers Handbook',28,'56.00'::float8::numeric::money,2,'2016-06-13')
+  ('Antropologia de la Ciencia',3,'18.50'::float8::numeric::money,2,'2016-07-24'),
+  ('Procesamiento de Imagenes con Opencv',15,'98.65'::float8::numeric::money,2,'2016-07-29');
+
+insert into revisor(id_user)
+values
+      (9),(10),(11),(12),(13),(14),(15),(16),
+      (17),(18),(19),(20),(21),(22),(23),(24),
+      (25),(26),(27),(28),(29),(30),(31),(32);
+
+insert into autor(id_user)
+values
+      (33),(34),(35),(36),(37),(38),(39),(40),(44),(47),(50);
+
+insert into libro_autor(id_autor, id_md)
+values
+      (1,1),(2,2),(3,3),(4,4),
+      (5,5),(6,6),(7,7),(8,8),
+      (9,9),(10,10),(11,10);
+
+insert into dir_editorial(id_user)
+values
+      (1),(2),(3),(4),(5),(6),(7),(8);
+
+insert into enviar(id_autor, id_md, id_director, fecha)
+values
+      (1,1,1,'2016-01-02 23:15:48'),(2,2,3,'2016-02-03 14:56:14'),
+      (3,3,7,'2016-04-30 19:45:14'),(4,4,6,'2016-05-01 23:26:34'),
+      (5,5,5,'2016-05-10 15:45:23'),(6,6,8,'2016-05-11 12:18:34'),
+      (7,7,1,'2016-05-26 05:34:43'),(8,8,4,'2016-06-15 04:23:45'),
+      (9,9,5,'2016-08-06 12:34:43'),(10,10,2,'2016-08-02 03:23:45'),
+      (11,10,2,'2016-08-02 03:23:45');
+
+insert into campos(nombre, descripcion)
+values
+      ('Computer Science','Estudio sistemático de la factibilidad, estructura, expresión y mecanización de procedimientos metódicos (o algoritmos) que subyacen en la adquisición, representación, procesamiento, almacenamiento, comunicación y acceso a la información si dicha información está codificada en forma de bits en una memoria de computadora'),
+      ('Fisica Pura','Ciencia que estudia las propiedades de los cuerpos y las leyes que rigen las transformaciones que afectan a su estado y a su movimiento, sin alterar su naturaleza'),
+      ('Matematica Pura','Estudio de las propiedades y relaciones entre entidades abstractas como números, figuras geométricas o símbolos.'),
+      ('Ing. Civil','La especialidad de la ingeniería que se encarga de la creación de infraestructuras, obras de transporte y emprendimiento hidráulicos se denomina ingeniería civil.'),
+      ('Sociologia','Ciencia que se dedica al estudio de los grupos sociales (conjunto de individuos que conviven agrupados en diversos tipos de asociaciones).'),
+      ('Psicologia','Disciplina que investiga sobre los procesos mentales de personas y animales.'),
+      ('Ing. Mecanica','La ingeniería mecánica es una rama de la ingeniería que aplica las ciencias exactas, especialmente en los principios físicos.'),
+      ('Ing. Electronica','Se ocupa justamente de atender, resolver y estudiar cuestiones vinculadas a esta materia tales como: la transformación de la electricidad.');
+
+insert into esp_autor(id_autor, id_campo)
+values
+      (1,1),(2,8),(3,4),(4,5),(5,6),(6,3),(7,2),(8,7),(9,5),(10,1),(11,1);
+
+insert into esp_revisor(id_revisor, id_campo)
+values
+      (1,2),(2,2),(3,2),(4,7),(5,7),(6,7),
+      (7,1),(8,1),(9,1),(10,6),(11,6),(12,6),
+      (13,5),(14,5),(15,5),(16,4),(17,4),(18,4),
+      (19,8),(20,8),(21,8),(22,3),(23,3),(24,3);
+
+insert into esp_director(id_director, id_campo)
+values
+      (1,2),(2,1),(3,8),(4,7),(5,6),(6,5),(7,4),(8,3);
+
+insert into eval_cabecera(id_md, id_director,fecha)
+values
+      (1,1,'2016-01-04 23:15:48'),
+      (2,3,'2016-02-05 14:56:14'),
+      (3,7,'2016-05-02 19:45:14'),
+      (4,6,'2016-05-03 23:26:34'),
+      (5,5,'2016-05-12 15:45:23'),
+      (6,8,'2016-05-13 12:18:34'),
+      (7,1,'2016-05-28 05:34:43'),
+      (8,4,'2016-06-17 04:23:45'),
+      (9,5,'2016-08-08 13:43:45'),
+      (10,2,'2016-08-09 21:35:15');
+
+insert into eval_detalle(id_evaluacion, id_revisor, comentario, nota)
+values
+      (1,7,'Muy buena la calidad de tu trabajo',5),(1,8,'Muy bueno',4),(1,9,'Preciso',4),
+      (2,19,'Buen Aporte',4),(2,20,'Excelente',4),(2,21,'Me sorprende',4),
+      (3,16,'Tienes que investigar más',2),(3,17,'Regular',3),(3,18,'No me agrado',2),
+      (4,13,'Te falto Argumentar',3),(4,14,'Falta mejorar',3),(4,15,'Regular',3),
+      (5,10,'Esta bueno',4),(5,11,'Falta investigar',3),(5,12,'Buenisimo',5),
+      (6,22,'Muy buena calidad',4),(6,23,'Muy innovador',5),(6,24,'Falto citar un importate autor',4),
+      (7,1,'Excelente, Preciso',5),(7,2,'Muy bueno',5),(7,3,'Bien argumetado',5),
+      (8,4,'Regular',4),(8,5,'Falta investigar más',3),(8,6,'bueno',4),
+      (9,13,'Malo',1),(9,14,'Incompleto',3),(9,15,'Un poco mediocre tu trabajo',2),
+      (10,7,'Preciso',4),(10,8,'',),(10,9,'',);
+
+insert into md_campo(id_campo, id_md)
+values 
+      (1,1),(8,2),(4,3),(5,4),
+      (6,5),(3,6),(2,7),(7,8)
+      (5,9),(1,10);  
+
+insert into h_busqueda(id_user, id_md, fecha)
+values
+  (48,8,'2016-10-14 12:43:32'),(45,2,'2016-10-15 17:23:12'),
+  (41,6,'2016-10-17 23:13:42'),(43,7,'2016-10-17 22:56:24'),
+  (49,7,'2016-10-19 11:35:45'),(28,1,'2016-10-20 12:43:32'),
+  (32,7,'2016-10-23 23:12:52'),(25,8,'2016-10-25 05:54:16'),
+  (48,8,'2016-10-14 12:43:32'),(45,2,'2016-10-15 17:23:12'),
+  (45,5,'2016-10-26 21:43:12'),(48,9,'2016-10-27 22:56:24');
+
+insert into md_adquirido(id_user, id_md, fecha)
+values
+  (48,8,'2016-10-14 12:45:12'),(41,6,'2016-10-17 23:13:42'),
+  (43,7,'2016-10-17 22:56:24'),(49,7,'2016-10-17 22:56:24'),
+  (28,1,'2016-10-20 12:43:32'),(25,8,'2016-10-25 05:54:16'),
+  (45,2,'2016-10-15 17:25:12'),(45,5,'2016-10-26 21:45:12'),
+  (48,9,'2016-10-27 22:58:24');
+
+insert into md(titulo, citas,precio,estado,año)
+values
+  ('Metodos Teoricos en Fisica',45,'35.23'::float8::numeric::money,1,'2015-12-15');
+
+insert into libro_autor(id_md,id_autor) values(12,7),(11,1);
+insert into md_campo(id_campo, id_md) values(2,12),(1,11);
+
+insert into enviar(id_autor,id_md, id_director,fecha) 
+values
+  (1,11,2,'2016-09-23 15:48:25'),
+  (7,12,1,'2016-10-06 23:43:12');
+
+insert into eval_cabecera(id_md, id_director,fecha)
+values 
+  (12,1,'2016-10-08 14:13:12')
+
+
+insert into eval_detalle(id_evaluacion, id_revisor,comentario,nota)
+values
+  (11,1,'Fundamentos Matematicos mas Claros',3),
+  (11,2,'Falto claridad en sus Demostraciones',4),
+  (11,2,'',);
+
+insert into md_adquirido(id_user, id_md, fecha)
+values
+  (33,12,'2016-10-25 12:45:48'),
+  (35,2,'2016-11-05 11:22:58'),
+  (40,7,'2016-11-07 07:12:58'),
+  (34,1,'2016-11-08 01:02:34'),
+  (34,6,'2016-11-10 06:02:34'),
+  (35,6,'2016-11-10 11:32:14');
+
+update eval_detalle set comentario='Muy Bueno', nota=4 where (id_evaluacion=11 and id_revisor=3);
+update eval_detalle set comentario='Bueno', nota=4 where (id_evaluacion=10 and id_revisor=8);
+update eval_detalle set comentario='Buen Aporte', nota=4 where (id_evaluacion=10 and id_revisor=9);
+
+update md set estado=2 where id_md=10;
+update md set estado=2 where id_md=12;
+
+insert into md_adquirido(id_user, id_md, fecha)
+values
+  (43,12,'2016-11-14 10:23:02'),
+  (49,12,'2016-11-15 14:21:02');
+
+
+insert into usuarios(nombre, apellido, correo, nickname, info_ac, password, fecha, state)
+values
+  ('Paul','Dirac','paul.dirac@copenhagen.com','dirac','Ph.D Physics University of Copenhagen','paul','2001-10-20 12:23:54',True),
+  ('Erwin','Schrodinger','erwin.schrodinger@copenhagen.com','erwin','Ph.D Physics University of Copenhagen','erwin','2001-11-22 02:13:27',True),
+  ('Gueorgi','Gamow','gueorgi.gamow@petrogrado.com','gueorgi','Ph.D Physics University of Petrogrado','gueorgi','2002-03-10 21:13:24',True);

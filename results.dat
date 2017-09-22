@@ -1,0 +1,21 @@
+ id_user |      nombre      | id_md 
+---------+------------------+-------
+      33 | Yván             |     2
+      34 | Edwards          |     3
+      36 | Stephen          |     4
+      37 | Johnie           |     5
+      39 | George Landau W. |    12
+      39 | George Landau W. |     7
+      40 | Irwin            |     8
+      44 | Hernan           |     9
+      47 | Carlos           |    10
+      50 | Pabel            |    10
+      38 | Adaricheva       |     6
+      32 | Ernesto          |    13
+      32 | Ernesto          |    11
+      32 | Ernesto          |     1
+      52 | Paul             |    14
+      53 | Erwin            |    15
+      54 | Gueorgi          |    16
+(17 rows)
+

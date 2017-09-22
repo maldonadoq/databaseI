@@ -1,0 +1,235 @@
+	# cambiar privilegios
+https://www.nanotutoriales.com/como-crear-un-usuario-y-asignarle-permisos-en-postgresql
+	# tutorial
+https://www.youtube.com/watch?v=C6dvBJWm1LE	
+	# change type
+https://www.postgresql.org/docs/8.0/static/sql-altertable.html
+https://www.postgresql.org/docs/9.1/static/	sql-altertype.html
+	# database
+https://www.w3schools.com/sql/sql_primarykey.asp
+	#comandos basicos
+http://caerices.blogspot.pe/2009/06/comandos-basicos.html
+	#timestamp
+http://www.postgresqltutorial.com/postgresql-timestamp/
+	#delete record
+http://www.postgresqltutorial.com/postgresql-delete/
+
+-----------------------------------
+ALTER TABLE h_bus ADD CONSTRAINT hbfk FOREIGN KEY (id_md) REFERENCES md(id_md);
+ALTER TABLE usuarios ADD PRIMARY KEY(id_user);
+DROP DATABASE name;
+CREATE DATABASE name OWNER user;
+REVOKE CONNECT ON DATABASE dbname FROM PUBLIC, username;
+REVOKE ALL PRIVILEGES ON DATABASE "database_name" FROMom username;
+alter table autor drop column info_ac; #delete column
+select *from usuar order by id_user;
+delete from usuar where id_user=12;
+
+ALTER TABLE empleados DROP COLUMN nombre_columna
+ALTER TABLE empleados ADD COLUMN nombre_columna BOOLEAN DEFAULT true
+ALTER TABLE empleados ALTER COLUMN nombre_columna DROP NOT NULL
+ALTER TABLE empledos ALTER COLUMN nombre_columna SET NOT NULL
+ALTER TABLE empleados ALTER COLUMN nombre_columna TYPE smallint
+
+
+
+
+
+UPDATE table SET id = DEFAULT;
+ALTER SEQUENCE seq RESTART;
+UPDATE table SET id = DEFAULT;
+
+#ALTER SEQUENCE seq RESTART WITH number;
+update usuarios set clave='RealMadrid'; 
+update usuarios set clave='Boca'
+  where nombre='Federicolopez';
+
+ALTER TABLE table_name DROP CONSTRAINT "table_name_id_fkey";
+insert into md(titulo, precio, estado,año) values('Maquina Virtual usando Pipeline','24.45'::float8::numeric::money,'0','2014-06-23');
+select datname,oid from pg_database; direccion
+
+
+-------------------------------------
+/etc/init.d/postgresql restart
+delete 
+/etc/init.d/postgresql stop
+2. purge the installation
+apt-get --purge remove postgresql\*
+3. cleanup
+rm -r /etc/postgresql/
+rm -r /etc/postgresql-common/
+rm -r /var/lib/postgresql/
+userdel -r postgres
+groupdel postgres
+
+exportar
+pg_dump -U maldonado -f /home/maldonado/Database/repository/repository.sql repository
+    exportar db repository a la direccion /home/..... 
+#pg_dumpall -U postgres > pg_todo.sql exportar all db
+
+importar
+psql -U maldonado eva < /home/maldonado/Database/repository/repository.sql;
+    importar .sql a db repos con el usuario maldonado
+
+gufw // firewall
+airmon-ng start wlp3s0 //aircrack
+airodump-ng mon0
+wash -i mon0 08:18:1A:FC:94:01  // buscar vulnerabilidades
+reaver -i mon0 -b 74:3E:2B:80:35:68  // prueba noma
+
+	#install-whatsapp-on-ubuntu-12-04-12-10-13-04-13-10-mint-13141516
+https://samtinkers.wordpress.com/2014/01/11/install-whatsapp-on-ubuntu-12-04-12-10-13-04-13-10-mint-13141516/
+https://github.com/scrooloose/nerdtree
+:NERDTree /home
+:NERDTreeClose
+:help NERD_tree.txt
+vim .vimrc
+
+cvlc --extraintf ncurses --random /home/maldonado/Vídeos/*.mp4
+
+postgresql.conf
+	listen_addreses = '*'
+pg_hba.conf
+	host    all             all             192.168.0.6/32            md5 //propia
+	host    all             all             192.168.0.5/32            md5 //otro
+
+Para conectarnos a la base de datos, necesitaremos conocer:
+Host: postgresql.guebs.net (ejemplo)
+Usuario: nombre_de_usuario
+Contraseña: *********
+Base de datos: nombre_de_base_de_datos
+
+psql -h postgresql.guebs.net -U nombre_de_usuario -d nombre_de_base_de_datos
+netstat -lp --protocol=unix | grep postgres
+
+
+Primero paso - cmake .
+Segundo paso - make
+Tercer paso  - sudo make install
+
+para saber si se instalo
+pkg-config --list-all | grep open
+
+agregar esto al momento de compilar 
+opencv
+
+
+-- django
+mkdir django
+django-admin startproject repository
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test',
+        'USER': 'maldonado',
+        'PASSWORD': 'maldonado',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+-- gunicorn
+gunicorn --bind localhost:8000 repository.wsgi:application
+
+https://scotch.io/tutorials/build-your-first-python-and-django-application
+
+
+#!/usr/bin/python
+# coding=utf-8
+import psycopg2
+import random
+import sys
+import time
+
+try:
+    conn = psycopg2.connect("dbname='test' user='maldonado' host='localhost' password='maldonado'")
+    print "I am connecting"
+except:
+    print "I am unable to connect to the database"
+
+cur = conn.cursor()
+cont = 0
+start_time = time.time()
+info = "Pregrado - Postgrado"
+while cont<3999949:
+    nombre = str(random.choice(open('nombre.dat').readlines()))
+    apellido = str(random.choice(open('apellido.dat').readlines()))
+    correo = nombre.rstrip()+"."+apellido.rstrip()+"@gmail.com"
+    query =  "INSERT INTO usuarios(nombre,apellido,correo,nickname,info_ac,password) VALUES (%s,%s,%s,%s,%s,%s);"
+    data = (nombre.rstrip(),apellido.rstrip(),correo,nombre.rstrip(),info.rstrip(),apellido.rstrip())
+    cur.execute(query, data)
+    cont+=1
+
+conn.commit()
+conn.close()
+
+end = (time.time()-start_time)/60
+print("%s minutos" %end)
+
+
+inicio = datetime(1997,01,30)
+final =  datetime(2017,05,28)
+
+con = 0
+while con<298957:
+	adj = str(random.choice(open('adj.dat').readlines()))
+	coll = str(random.choice(open('coll.dat').readlines()))
+	dev = str(random.choice(open('dev.dat').readlines()))
+	noun = str(random.choice(open('noun.dat').readlines()))
+	verb = str(random.choice(open('verb.dat').readlines()))
+
+	titulo = adj.rstrip()+" "+coll.rstrip()+" "+dev.rstrip()+" "+noun.rstrip()+" "+verb.rstrip()
+	precio = random.uniform(20.00, 200.00)
+	anio = inicio + timedelta(seconds= int((final - inicio).total_seconds() * random.random()))
+	query =  "INSERT INTO md(titulo,citas,precio,estado,año) VALUES (%s,%s,%s,%s,%s);"
+	data = (titulo,randint(0,50),format(precio,'.2f'),2,anio)
+	cur.execute(query, data)
+	con += 1
+
+conn.commit()
+conn.close()
+
+con = 0
+while con<992:
+	id_user = randint(50,10000)
+	query =  "SELECT id_user FROM revisor WHERE id_user = '%s';"%(id_user)
+	cur.execute(query)
+	result = cur.fetchall()
+	if len(result)==0:
+		"""query =  "INSERT INTO revisor(id_user) VALUES (%s);"%(id_user)
+		cur.execute(query)"""
+		con += 1
+
+conn.commit()
+conn.close()
+
+
+	print id_campo, id_director"""
+	"""query =  "SELECT id_user FROM revisor WHERE id_user = '%s';"%(id_user)
+	cur.execute(query)
+	result = cur.fetchall()
+	if len(result)==0:
+		query =  "INSERT INTO revisor(id_user) VALUES (%s);"%(id_user)
+		cur.execute(query)
+		con += 1
+
+con = 0
+while con<5000:
+	id_campo = randint(1,8)
+	id_autor = randint(1000,400000)
+
+	query =  "SELECT id_autor FROM esp_autor WHERE id_autor='%s' and id_campo='%s';"%(id_autor,id_campo)
+	cur.execute(query)
+	result = cur.fetchall()
+	if len(result)==0:
+		query =  "INSERT INTO esp_autor(id_autor, id_campo) VALUES (%s,%s);"%(id_autor,id_campo)
+		cur.execute(query)
+		con += 1
+
+conn.commit()
+conn.close()
